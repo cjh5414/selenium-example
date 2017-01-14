@@ -1,5 +1,7 @@
 from selenium import webdriver
 
-driver = webdriver.Chrome('chromedriver')
-driver.get("http://www.python.org")
-driver.quit()
+def test_selenium():
+    driver = webdriver.Chrome('chromedriver')
+    driver.get("https://cjh5414.github.io")
+    assert driver.title == "jihun's Development blog •"
+    driver.quit()
